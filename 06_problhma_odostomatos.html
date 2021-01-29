@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="el">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Δήμος Θεσσαλονίκης</title>
+        <link rel="stylesheet" type="text/css" href="00_style.css">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg justify-content-center bgColorHeader">
+            <h1 class="navbar-brand nav-text">Δήμος Θεσσαλονίκης</h1>        
+        </nav>        
+        
+        <div class="container-fluid">
+            <!--    Dropdown menu    -->
+            <div class="row">
+                <div class="col-2 mt-3">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons mainColor hamburger">menu</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">                            
+                            <a class="dropdown-item" href="03_xalasmenos_simatodotis.html">Βλάβη φωτεινού σηματδότη</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="04_xalasmenos_fotismos.html">Βλάβη φωτισμού</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="05_kladema_pesmeno_dentro.html">Κλάδεμα/πεσμένο δέντρο</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="06_problhma_odostomatos.html">Πρόβλημα οδοστρώματος</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="07_allo.html">Άλλο</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Επικεφαλίδα -->
+                <div class="col-8 mt-4 text-center mainColor"> 
+                    <h4>Πρόβλημα οδοστρώματος</h4>
+                </div>
+                
+                <!-- Pic Δήμος Θεσσαλονίκης -->
+                <div class="col-2">
+                    <img class="img-fluid mt-2" src="photos/dimos_thessalonikis_logo.png" alt="Pic Δήμος Θεσσαλονικής">
+                </div>
+            </div>
+
+            <!-- Χάρτης της Θεσσλονίκης-κέντρο -->
+            <div class="row">                
+                <div class="col-sm-8 col-md-6 col-lg-8 offset-sm-2 offset-md-3 offset-lg-2">
+
+                    <div id="map" class="mt-2"></div>
+
+                </div>
+            </div>
+
+            <!-- Πλαίσιο για την εισαγωγή της διεύθυνσης -->
+            <form action="08_epeivevaiosi_dilosis.html" method="get">
+                <div class="row">
+                    <div class="col-sm-8 col-md-6 col-lg-6 offset-sm-2 offset-md-3 offset-lg-3">
+                        <div class="input-group mt-4">
+                            <div class="input-group-prepend">
+                                <button type="button" class="btn btn-outline-secondary" onclick="getLocation()">
+                                    <span class="material-icons md-17 mr-1 pl-1">my_location</span>
+                                </button>                                
+                            </div>
+                            <input id="address" name="address" type="text" class="form-control" placeholder="Εισαγωγή διεύθυνσης">
+                            <div class="input-group-append">
+                                <button id="submmitTypeAddress" type="button" class="btn btn-outline-secondary">
+                                    <span class="material-icons md-17 mr-1 pl-1">search</span>
+                                </button>                          
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Πλαίσιο για την εισαγωγή σχολίων -->
+                <div class="row">                
+                    <div class="col-sm-8 col-md-6 col-lg-6 offset-sm-2 offset-md-3 offset-lg-3">
+                        <div class="input-group mt-2">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text material-icons">edit</span>
+                            </div>
+                            <input id="comments" name="comments" type="text" class="form-control" placeholder="Σχόλια">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">    
+                    <div class="col-sm-8 col-md-6 col-lg-6 offset-sm-2 offset-md-3 offset-lg-3">
+                        <div class="btn-toolbar">    
+                            <!-- Κουμπί ακύρωσης -->
+                            <div class="btn-group mr-auto mb-3" role="group">
+                                <a class="btn btn-outline-danger mt-5 textOpacity colorButton" href="02_epiloges_blabis.html">
+                                    <span class="material-icons float-right mainColor mainColor">close</span>
+                                </a>
+                            </div>
+
+                            <!-- Κουμπί επιβεβαίωσης -->
+                            <div class="btn-group mb-3" role="group">
+                                <button  type="submit" class="btn btn-outline-success mt-5 textOpacity colorButton" onclick="getComments()">
+                                    <span class="material-icons float-right mainColor">check</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+
+            </form>           
+
+        </div>
+        <!-- Close container -->        
+
+        <script src="JS_script/geolocation.js"></script>
+            
+        <script src="JS_script/getComments.js"></script>  
+
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAanfQQnzPfflkSfJbMqwIcbh3Godh6BE4&callback=initMap">
+        </script>          
+
+    </body>
+    
+</html>
