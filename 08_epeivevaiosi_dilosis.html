@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="el">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Δήμος Θεσσαλονίκης</title>
+        <link rel="stylesheet" type="text/css" href="00_style.css">
+
+
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg justify-content-center bgColorHeader">
+            <h1 class="navbar-brand nav-text">Δήμος Θεσσαλονίκης</h1>        
+        </nav>      
+        
+        <div class="container-fluid">
+
+            <!--    Dropdown menu    -->
+            <div class="row">
+
+                <div class="col-2 mt-3">
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="material-icons mainColor hamburger">menu</span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenu">                            
+                            <a class="dropdown-item" href="03_xalasmenos_simatodotis.html">Βλάβη φωτεινού σηματδότη</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="04_xalasmenos_fotismos.html">Βλάβη φωτισμού</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="05_kladema_pesmeno_dentro.html">Κλάδεμα/πεσμένο δέντρο</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="06_problhma_odostomatos.html">Πρόβλημα οδοστρώματος</a>
+                            <div class="dropdown-divider borderBotomColor"></div>
+                            <a class="dropdown-item" href="07_allo.html">Άλλο</a>
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-8 mt-4 text-center mainColor">
+                    <h4>Επιβεβαίωση δήλωσης</h4>
+                </div>
+                
+                <div class="col-2">
+                    <img class="img-fluid d-none d-md-block mt-2" src="photos/dimos_thessalonikis_logo.png" alt="Δήμος Θεσσαλονικής">
+                </div>
+            </div>
+
+            <!-- Πλαίσιο διεύθυνσης -->
+            <div class="row">                
+                <div class="col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+                    <div class="input-group mt-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text material-icons">place</span>
+                        </div>
+                        <input type="text" id="address" class="form-control" placeholder="Διεύθυνση" readonly>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Πλαίσιο σχολίων -->
+            <div class="row">                
+                <div class="col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+                    <div class="form-group mt-3">
+                        <textarea id="comments" class="form-control" rows="7" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <!-- Κουμπί ακύρωσης -->
+                <div class="col-sm-8 col-md-6 col-lg-4 offset-sm-2 offset-md-3 offset-lg-4">
+                    <div class="btn-toolbar">
+                        <div class="btn-group mr-auto" role="group">
+                            <a class="btn btn-outline-danger mt-5 textOpacity colorButton" href="02_epiloges_blabis.html">
+                                <span class="material-icons float-right mainColor iconColor">close</span>
+                            </a>
+                        </div>
+
+                        <!-- Κουμπί επιβεβαίωσης -->
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-outline-success mt-5 textOpacity colorButton" onclick="submitWindow()">
+                                <span class="material-icons float-right iconColor">check</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+        </div>
+        <!-- Close container -->        
+
+        <script src="JS_script/setAddressComments.js"></script>
+
+        <script src="JS_script/submitWindow.js"></script>
+
+    </body>
+
+</html>

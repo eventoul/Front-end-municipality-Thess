@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.mainColor {
+    color: rgb(1, 109, 141);
+}
+
+.bgColorHeader {
+    background-color: rgb(1, 109, 141);
+}
+
+.colorButton {
+    border-radius: 10px;
+    border: 2px solid rgb(1, 109, 141);
+}
+
+.borderBotomColor {
+    border-color: rgb(1, 109, 141);
+}
+
+.colorButton:hover .mainColor {
+    color: white;
+}
+
+.textOpacity {
+    opacity: 0.5;
+    color: black;
+}
+
+.nav-text {
+    color: white;
+    text-align: center;
+}
+
+.firstButtonPosition {
+    bottom: 2px; 
+    position: relative;
+}
+
+.hamburger {
+    font-size: 2rem;
+}
+
+.navbar-toggler.toggler-example {
+    cursor: pointer;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+#map {
+    height: 250px;
+    width: 100%;
+}
+
+.material-icons.md-17 {
+     font-size: 17px;
+     
+}
